@@ -1,0 +1,123 @@
+body{
+  margin:0px;
+  padding:0px;
+}
+
+#toraIcon
+{
+  height: 25px;
+  width: 50px;
+  position: fixed;
+  top: 50;
+  right:50;
+}
+#toraIcon:hover{
+  cursor: pointer;
+}
+#toraLine{
+  height: 4px;
+  width: 50px;
+  background-color:#181818;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  transition: all .3s;
+}
+
+#toraIcon:hover #toraLine{
+  width:40px;
+}
+#toraLine::before
+{
+  content: '';
+  height:   4px;
+  width:   40px;
+  background-color: #181818;
+  position:absolute;
+  margin-top: 10px;
+  transition: all .3s;
+}
+#toraIcon:hover #toraLine::before{
+  width:50px;
+}
+
+#toraLine::after{
+  content: '';
+  height:4px;
+  width:40px;
+  background-color:#181818;
+  position: absolute;
+  margin-top: -10px;
+  transition: all .3s;
+}
+
+#toraIcon:hover #toraLine::after{
+  width:50px;
+}
+
+#toraMenu{
+  height: 100vh;
+  width: 300px;
+  background-color: #181818;
+  -webkit-clip-path: polygon(0 0,100% 0%,100% 100%,0% 100%);
+  position:fixed;
+  top: 0;
+  left:-300px;
+  transition: all .5s ease-in-out;
+}
+
+ul{
+  list-style: none;
+  padding:0px;
+  margin: 0px;
+  font-family: arial;
+  color:white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul li{
+  margin: 20px;
+}
+
+ul li:hover
+{
+  cursor: pointer;
+}
+
+.tora-line{
+  height: 2px;
+  width: 150px;
+  background-color: white;
+  margin-top: 10px;
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all .3s;
+}
+
+ul li:hover .tora-line{
+  width: 180px;
+}
+#logo{
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#close{
+  background:white;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#close:hover{
+  cursor: pointer;
+}
